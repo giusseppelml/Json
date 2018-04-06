@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 #EXTENSIÓN DE CLASES: Los objetos pueden ser extendidos, y pueden heredar propiedades y métodos. Para definir una clase como extensión, debo definir una clase padre, y se utiliza dentro de una clase hija.
 
@@ -51,7 +51,7 @@ class Datos extends Conexion
         while ($fila = $stmt->fetch(PDO::FETCH_BOUND)) {
             $user              = array();
             $user[':id']       = utf8_encode($id);
-            $user['u:suario']  = utf8_encode($usuario);
+            $user[':usuario']  = utf8_encode($usuario);
             $user[':password'] = utf8_encode($password);
             $user[':email']    = utf8_encode($email);
 

@@ -49,11 +49,11 @@ class Datos extends Conexion
         $usuarios = array();
 
         while ($fila = $stmt->fetch(PDO::FETCH_BOUND)) {
-            $user              = array();
-            $user[':id']       = utf8_encode($id);
-            $user[':usuario']  = utf8_encode($usuario);
-            $user[':password'] = utf8_encode($password);
-            $user[':email']    = utf8_encode($email);
+            $user             = array();
+            $user['id']       = utf8_encode($id);
+            $user['usuario']  = utf8_encode($usuario);
+            $user['password'] = utf8_encode($password);
+            $user['email']    = utf8_encode($email);
 
             array_push($usuarios, $user);
         }
